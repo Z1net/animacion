@@ -1,0 +1,85 @@
+
+@keyframes color { 
+    0% {fill: rgb(255, 204, 0);}
+    33% {fill: rgb(255, 167, 16);}
+    66% {fill: rgb(255, 77, 166);}
+    100% {fill: rgb(181, 16, 154); }
+
+ }
+
+ @keyframes colorback{ 
+    from{background-color: rgb(26, 109, 30);}
+    to {background-color: rgb(14, 54, 36);}
+
+ }
+    
+ @keyframes rota{ 
+        0% {transform: rotate(360deg);} 
+        20% {transform: rotate(360deg);} 
+        25% {transform: rotate(270deg);}
+        45% {transform: rotate(270deg);}   
+        50% {transform: rotate(180deg);}  
+        70% {transform: rotate(180deg);}  
+        75% {transform: rotate(90deg);}  
+        95% {transform: rotate(90deg);}  
+        100%{transform: rotate(0deg);}
+         }
+
+         @keyframes rotat{ 
+            from {transform: rotate(-90deg);}  
+             to {transform: rotate(270deg);}
+             }
+
+body{
+    text-align: center;
+    margin: 0px;   
+    background-color: rgb(215, 255, 231);
+    animation: colorback 5s linear .0s infinite alternate;
+} 
+
+ 
+.container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;  
+}
+
+#caraser{
+    margin: -200px;
+     height: 300px;
+     transition:  .2s;
+}
+#caraser:hover{
+    margin: -100px;
+    height: 500px;
+}
+
+#caraser .ojo{
+    fill: rgb(255, 138, 70);
+
+    animation-name:color; 
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-delay: .5s;
+    animation-iteration-count:infinite; 
+    animation-direction: backwards;
+    
+}
+
+#snake{
+    margin: auto;
+    width: 250px;
+    
+    animation: rota  2s linear 0s infinite backwards;
+}
+
+#snail{
+    margin: auto;
+    fill: #F72349;
+    position: relative;
+    width: 250px;
+    
+    animation: rotat  4s linear 0s infinite forwards;
+}
